@@ -1,0 +1,25 @@
+-- 1. إنشاء جدول المستخدمين
+CREATE TABLE users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    role VARCHAR(20) DEFAULT 'staff'
+);
+
+-- 2. إنشاء جدول العملاء
+CREATE TABLE clients (
+    client_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_name VARCHAR(150) NOT NULL,
+    phone VARCHAR(20),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 3. إنشاء جدول المعاملات والطلبات
+CREATE TABLE transactions (
+    transaction_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id INTEGER,
+    title VARCHAR(200) NOT NULL,
+    amount DECIMAL(12, 2) DEFAULT 0.00,
+    status VARCHAR(20) DEFAULT 'pending',
+    FOREIGN KEY (client_id) REFERENCES clients(client_id)
+);
