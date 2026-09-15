@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صقر - معرض الأعمال والملف الشخصي</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #2563eb;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #93c5fd;
+            margin-bottom: 15px;
+        }
+
+        .email-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            direction: ltr;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .contact-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 28px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>صقر | Saqr</h1>
+        <p>مطور برمجيات & أخصائي قواعد بيانات وإدارة أنظمة شبكات</p>
+        <div class="email-badge">📧 saqr70164@gmail.com</div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">معرض الأعمال والخدمات</h2>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>نظام إدارة البيانات والتقارير المالية</h3>
+                <p>تطوير نظام برمجي مكتمل بلغة Java مرتبط بقواعد بيانات SQL لمعالجة المعاملات وحساب التقارير والتجميع المالي بكفاءة عالية.</p>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">SQLite</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🗄️</div>
+                <h3>تراسل وقواعد بيانات شبكية SQL</h3>
+                <p>تصميم ونمذجة قواعد بيانات معقدة (Schema Design)، مع تطبيق قواعد المعايرة (Normalization) وتحسين سرعة أداء الاستعلامات.</p>
+                <div class="tags">
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Database Design</span>
+                    <span class="tag">ER Diagrams</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🐧</div>
+                <h3>إدارة خوادم Linux وتأمين الشبكات</h3>
+                <p>إعداد وتكوين خادم Ubuntu Server متكامل، مع ضبط جدار الحماية UFW، شهادات SSL، والنسخ الاحتياطي التلقائي مع تفعيل SSH.</p>
+                <div class="tags">
+                    <span class="tag">Ubuntu</span>
+                    <span class="tag">UFW Firewall</span>
+                    <span class="tag">Bash Scripting</span>
+                    <span class="tag">Networking</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>هل لديك مشروع أو استفسار تقني؟</h2>
+            <p>يمكنك التواصل معي مباشرة عبر البريد الإلكتروني لمناقشة التفاصيل وبدء العمل على مشروعك.</p>
+            <a href="mailto:saqr70164@gmail.com" class="contact-btn">تواصل معي عبر البريد</a>
+        </div>
+
+        <footer>
+            <p>© 2026 صقر - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+
+</body>
+                                              </html>
+                                              
