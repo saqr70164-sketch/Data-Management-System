@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة المبيعات والمخازن</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f4f6f9; color: #333; padding: 20px; }
+        header { background: #1e293b; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-right: 5px solid #2563eb; }
+        .card h3 { font-size: 14px; color: #64748b; margin-bottom: 5px; }
+        .card p { font-size: 24px; font-weight: bold; color: #0f172a; }
+        .table-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        .table-section h2 { margin-bottom: 15px; font-size: 18px; color: #1e293b; }
+        table { width: 100%; border-collapse: collapse; text-align: right; }
+        th, td { padding: 12px; border-bottom: 1px solid #e2e8f0; }
+        th { background-color: #f8fafc; color: #475569; }
+        .badge { background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>نظام إدارة المبيعات والمخازن (Sales & Inventory ERP)</h1>
+        <span>المطور: صقر</span>
+    </header>
+
+    <div class="stats-container">
+        <div class="card">
+            <h3>إجمالي المبيعات</h3>
+            <p>260.00 $</p>
+        </div>
+        <div class="card">
+            <h3>عدد المنتجات بالمخزن</h3>
+            <p>93 قطعة</p>
+        </div>
+        <div class="card">
+            <h3>الفواتير المصدرة</h3>
+            <p>1 فاتورة</p>
+        </div>
+    </div>
+
+    <div class="table-section">
+        <h2>تقرير العمليات والأرباح (مخرجات استعلام SQL)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>رقم الفاتورة</th>
+                    <th>اسم العميل</th>
+                    <th>المنتج المباع</th>
+                    <th>الكمية</th>
+                    <th>الإجمالي</th>
+                    <th>المخزون المتبقي</th>
+                    <th>الحالة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    #1
+                    أحمد علي
+                    شاشة سامسونج 24
+                    2
+                    260.00 $
+                    13 قطعة
+                    <span class="badge">مكتمل</span>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
